@@ -1,37 +1,45 @@
-HELP.md
-target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# =========================
+# Backend - Java / Spring Boot
+# =========================
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
 
-### STS ###
-.apt_generated
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# STS / Eclipse
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+# NetBeans
+backend/nbproject/private/
+backend/nbbuild/
+backend/dist/
+backend/nbdist/
+backend/.nb-gradle/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# =========================
+# Frontend - React / Vite
+# =========================
+frontend/node_modules/
+frontend/dist/
 
-### VS Code ###
-.vscode/
-
-# Local secrets
+# =========================
+# Environment / secrets
+# =========================
 .env
-application-local.properties
+**/.env
+**/application-local.properties
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db

@@ -1,0 +1,98 @@
+.task-board {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.task-board-header {
+  margin-bottom: 30px;
+}
+
+.task-board-header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.task-board-header p {
+  margin: 0;
+  color: #666;
+}
+
+.task-list {
+  display: grid;
+  gap: 20px;
+}
+
+.task-card {
+  padding: 24px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.task-card h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.task-description {
+  margin-bottom: 20px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.task-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.task-status label {
+  font-weight: 600;
+}
+
+.task-status select {
+  padding: 9px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+  font-size: 14px;
+}
+
+.task-status button {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 5px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.task-status button:hover {
+  background: #1d4ed8;
+}
+
+.task-message {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.task-error {
+  padding: 12px;
+  margin-bottom: 20px;
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 6px;
+}
+
+.empty-tasks {
+  padding: 40px;
+  text-align: center;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  color: #666;
+}

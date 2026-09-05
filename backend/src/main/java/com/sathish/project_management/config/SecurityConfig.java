@@ -8,7 +8,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import com.sathish.project_management.filter.JwtAuthenticationFilter;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-
+import org.springframework.http.HttpMethod;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -36,6 +36,10 @@ public class SecurityConfig {
                         .requestMatchers("/tasks/my-tasks").authenticated()
                         .requestMatchers("/tasks/*/status").authenticated()
                         .requestMatchers("/tasks/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/leaves").authenticated()
+                        .requestMatchers(HttpMethod.GET, "/leaves/my-leaves").authenticated()
+                        .requestMatchers(HttpMethod.GET, "/leaves").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/leaves/*/status").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(
@@ -45,6 +49,9 @@ public class SecurityConfig {
                 .exceptionHandling(exception -> exception
                         .authenticationEntryPoint((request, response, authException) -> {
                             response.setStatus(401);
+                        })
+                        .accessDeniedHandler((request, response, accessDeniedException) -> {
+                            response.setStatus(403);
                         })
                 )
                 .build();

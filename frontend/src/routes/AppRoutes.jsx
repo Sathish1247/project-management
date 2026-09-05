@@ -4,6 +4,7 @@ import Dashboard from '../pages/Dashboard';
 import TaskBoard from '../pages/TaskBoard';
 import ProtectedRoute from './ProtectedRoute';
 import AppLayout from '../components/AppLayout';
+import Leave from '../pages/Leave';
 
 function AppRoutes() {
   return (
@@ -19,6 +20,7 @@ function AppRoutes() {
       >
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/my-tasks" element={<TaskBoard />} />
+        <Route path="/leave" element={<Leave />} />
       </Route>
 
       <Route

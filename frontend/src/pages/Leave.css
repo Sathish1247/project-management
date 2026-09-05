@@ -1,0 +1,136 @@
+.leave-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.leave-header {
+  margin-bottom: 30px;
+}
+
+.leave-header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.leave-header p {
+  margin: 0;
+  color: #666;
+}
+
+/* Leave form */
+
+.leave-form-card,
+.leave-list-card {
+  padding: 24px;
+  margin-bottom: 24px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.leave-form-card h2,
+.leave-list-card h2 {
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.leave-form-card button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.leave-form-card button:hover {
+  background: #1d4ed8;
+}
+
+/* Success and error messages */
+
+.leave-success {
+  padding: 12px;
+  margin-bottom: 20px;
+  color: #166534;
+  background: #dcfce7;
+  border-radius: 6px;
+}
+
+.leave-error {
+  padding: 12px;
+  margin-bottom: 20px;
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 6px;
+}
+
+/* Leave list */
+
+.leave-list {
+  display: grid;
+  gap: 16px;
+}
+
+.leave-item {
+  padding: 18px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.leave-item p {
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+.leave-item p:last-child {
+  margin-bottom: 0;
+}
+
+.leave-item strong {
+  font-weight: 600;
+}
+
+/* Empty and loading state */
+
+.leave-empty {
+  padding: 30px;
+  text-align: center;
+  background: #f9fafb;
+  border-radius: 6px;
+  color: #666;
+}

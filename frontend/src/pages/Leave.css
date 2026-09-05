@@ -134,3 +134,41 @@
   border-radius: 6px;
   color: #666;
 }
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.leave-form-card button:active {
+  transform: translateY(1px);
+}
+
+.leave-item {
+  transition: box-shadow 0.2s ease;
+}
+
+.leave-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 600px) {
+  .leave-page {
+    padding: 30px 16px;
+  }
+
+  .leave-header h1 {
+    font-size: 28px;
+  }
+
+  .leave-form-card,
+  .leave-list-card {
+    padding: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+}
